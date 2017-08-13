@@ -37,7 +37,7 @@
             "trim_start": 3491,
             "trim_end": 576648,
             "loop": 132317
-        }, 
+        },
         {
             "track_number": 6,
             "title": "Stage Selected",
@@ -51,7 +51,7 @@
             "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 03 Opening Stage.wav",
             "trim_start": 6248,
             "trim_end": 5051901,
-            "loop": 50640 
+            "loop": 50640
         },
         {
             "track_number": 8,
@@ -67,7 +67,7 @@
             "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 06 Cold Man.wav",
             "trim_start": 3886,
             "trim_end": 2848976,
-            "loop": 202868,
+            "loop": 202868
         },
         {
             "track_number": 10,
