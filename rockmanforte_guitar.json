@@ -1,0 +1,214 @@
+{
+    "$schema": "https://raw.githubusercontent.com/qwertymodo/msupcmplusplus/master/configs/schema#",
+    "game": "Rockman & Forte",
+    "pack": "Rockman & Forte Guitar Playthrough",
+    "artist": "Krzysztof Słowikowski",
+    "url": "http://www.mediafire.com/?gb61j7qiwkadu2w",
+    "normalization": -12,
+    "output_prefix": "rockmanforte_msu1",
+    "tracks": [
+        {
+            "track_number": 1,
+            "title": "Title Screen",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 01 Title.wav",
+            "trim_start": 4088,
+            "trim_end": 851132
+        },
+        {
+            "track_number": 2,
+            "title": "File Select",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 17 Save.wav",
+            "trim_start": 4831,
+            "trim_end": 1610150,
+            "loop": 625583
+        },
+        {
+            "track_number": 4,
+            "title": "Player Select",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 02 Player Select.wav",
+            "trim_start": 5207,
+            "trim_end": 571461,
+            "loop": "288900"
+        },
+        {
+            "track_number": 5,
+            "title": "Stage Select",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 04 Stage Select.wav",
+            "trim_start": 3491,
+            "trim_end": 576648,
+            "loop": 132317
+        }, 
+        {
+            "track_number": 6,
+            "title": "Stage Selected",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 05 Stage Start.wav",
+            "trim_start": 4796,
+            "trim_end": 373571
+        },
+        {
+            "track_number": 7,
+            "title": "Museum",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 03 Opening Stage.wav",
+            "trim_start": 6248,
+            "trim_end": 5051901,
+            "loop": 50640 
+        },
+        {
+            "track_number": 8,
+            "title": "Dynamo Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 13 Dynamo Man.wav",
+            "trim_start": 5384,
+            "trim_end": 5538875,
+            "loop": 104964
+        },
+        {
+            "track_number": 9,
+            "title": "Cold Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 06 Cold Man.wav",
+            "trim_start": 3886,
+            "trim_end": 2848976,
+            "loop": 202868,
+        },
+        {
+            "track_number": 10,
+            "title": "Ground Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 09 Ground Man.wav",
+            "trim_start": 5216,
+            "trim_end": 2317706,
+            "loop": 59560
+        },
+        {
+            "track_number": 11,
+            "title": "Tengu Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 10 Tengu Man.wav",
+            "trim_start": 7491,
+            "trim_end": 2216824,
+            "loop": 117490
+        },
+        {
+            "track_number": 12,
+            "title": "Astro Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 12 Astro Man.wav",
+            "trim_start": 5769,
+            "trim_end": 3316887,
+            "loop": 203914
+        },
+        {
+            "track_number": 13,
+            "title": "Pirate Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 08 Pirate Man.wav",
+            "trim_start": 7189,
+            "trim_end": 2843541,
+            "loop": 102526
+        },
+        {
+            "track_number": 14,
+            "title": "Burner Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 07 Burner Man.wav",
+            "trim_start": 7037,
+            "trim_end": 2452117,
+            "loop": 280652
+        },
+        {
+            "track_number": 15,
+            "title": "Magic Man",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 11 Magic Man.wav",
+            "trim_start": 8643,
+            "trim_end": 3852712,
+            "loop": 211498
+        },
+        {
+            "track_number": 16,
+            "title": "King Castle",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 22 King's Fortress.wav",
+            "trim_start": 5533,
+            "trim_end": 2482346,
+            "loop": 175610
+        },
+        {
+            "track_number": 17,
+            "title": "Wily Castle",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 23 Dr Wily's Fortress.wav",
+            "trim_start": 4143,
+            "trim_end": 1373966,
+            "loop": 32291
+        },
+        {
+            "track_number": 18,
+            "title": "Seals",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 19 Capsule Room.wav",
+            "trim_start": 5139,
+            "trim_end": 663941,
+            "loop": 31902
+        },
+        {
+            "track_number": 19,
+            "title": "King Castle Intro",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 21 King's Fortress Intro.wav",
+            "trim_start": 8064,
+            "trim_end": 293155
+        },
+        {
+            "track_number": 20,
+            "title": "New Weapon Presentation",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 16 Weapon Obtained.wav",
+            "trim_start": 7834,
+            "trim_end": 380493,
+            "loop": 30584
+        },
+        {
+            "track_number": 21,
+            "title": "Victory",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 15 Stage Clear.wav",
+            "trim_start": 6088,
+            "trim_end": 226959
+        },
+        {
+            "track_number": 22,
+            "title": "Rightot's Shop",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 20 Auto's Shop.wav",
+            "trim_start": 5087,
+            "trim_end": 1423928,
+            "loop": 68840
+        },
+        {
+            "track_number": 23,
+            "title": "Data Base",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 18 CD Database.wav",
+            "trim_start": 4916,
+            "trim_end": 4639314,
+            "loop": 226294
+        },
+        {
+            "track_number": 24,
+            "title": "Game Over",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 26 Game Over.wav",
+            "trim_start": 4992,
+            "trim_end": 638255,
+            "loop": 35287
+        },
+        {
+            "track_number": 25,
+            "title": "Credits",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 25 Epilogue.wav",
+            "trim_start": 5847,
+            "trim_end": 7042615
+        },
+        {
+            "track_number": 27,
+            "title": "Boss",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 14 Boss.wav",
+            "trim_start": 4937,
+            "trim_end": 2441686,
+            "loop": 363414
+        },
+        {
+            "track_number": 28,
+            "title": "Last Boss",
+            "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 24 Final Battle.wav",
+            "trim_start": 7607,
+            "trim_end": 1729544,
+            "loop": 366219
+        }
+    ]
+}

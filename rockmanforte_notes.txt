@@ -1,0 +1,165 @@
+Rockman & Forte
+HiROM
+
+=========
+= Music =
+=========
+; Actual Index (hex) | PCM Index (dec) | Name
+$11 = na = Capcom Logo
+$12 = 01 = Title Screen
+$13 = 02 = File Select
+$14 = 03 = ???
+$15 = 04 = Player Select
+$16 = 05 = Stage Select
+$17 = 06 = Stage Selected
+$18 = 07 = Museum
+$19 = 08 = Dynamo Man
+$1A = 09 = Cold Man
+$1B = 10 = Ground Man
+$1C = 11 = Tengu Man
+$1D = 12 = Astro Man
+$1E = 13 = Pirate Man
+$1F = 14 = Burner Man
+$20 = 15 = Magic Man
+$21 = 16 = King Castle
+$22 = 17 = Wily Castle
+$23 = 18 = Seals
+$24 = 19 = King Castle Intro (No Loop)
+$25 = 20 = New Weapon Presentation
+$26 = 21 = Victory (No Loop)
+$27 = 22 = Rightot's Shop
+$28 = 23 = Data Base
+$29 = 24 = Game Over
+$2A = 25 = Credits
+$2B = 26 = (Silence)
+$2C = 27 = Boss
+$2D = 28 = Last Boss
+$2E = 29 = Blues Whistle
+
+==============
+= Free Space =
+==============
+0x7080 - 0x7FFF (3968 bytes) $C07080
+
+====================
+= Play Music calls =
+====================
+$C00532
+$C01A76
+$C03B6E
+$C040D2
+$C04A4E
+$C05A6D
+$C05D45
+$C05F13
+$C0606B
+$C0626B
+$C06736
+$C067A0
+
+==========================
+= Original Game Behavior =
+==========================
+* The music is muted during attract mode
+* Volume does NOT drop in pause menu
+* Music fade quickly when selecting an item in the title screen
+
+============
+= Research =
+============
+; SFX playing
+c04aef sep #$30               A:02ff X:00ff Y:0003 S:02fd D:0000 DB:80 NvMXdizc V:232 H: 76 F:41
+c04af1 ldx $0b51     [800b51] A:02ff X:00ff Y:0003 S:02fd D:0000 DB:80 NvMXdizc V:232 H: 80 F:41
+c04af4 cpx $0b50     [800b50] A:02ff X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdizc V:232 H: 87 F:41
+c04af7 beq $4b33     [c04b33] A:02ff X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdiZC V:232 H: 93 F:41
+c04afc cmp $7efffe   [7efffe] A:0203 X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdizc V:233 H:151 F:59
+c04b00 bne $4b33     [c04b33] A:0203 X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdiZC V:233 H:159 F:59
+c04b02 inc                    A:0203 X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdiZC V:233 H:162 F:59
+c04b03 sta $7efffe   [7efffe] A:0204 X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdizC V:233 H:165 F:59
+c04b07 ldy $0b53,x   [800b57] A:0204 X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdizC V:233 H:173 F:59
+c04b0a sty $2141     [802141] A:0204 X:0004 Y:0000 S:02fd D:0000 DB:80 nvMXdiZC V:233 H:180 F:59
+c04b0d lda $0b52,x   [800b56] A:0204 X:0004 Y:0000 S:02fd D:0000 DB:80 nvMXdiZC V:233 H:186 F:59
+c04b10 cmp #$f0               A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 NvMXdizC V:233 H:192 F:59
+c04b12 bcc $4b28     [c04b28] A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 nvMXdizC V:233 H:195 F:59
+c04b14 cmp #$fe               A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 nvMXdizC V:233 H:198 F:59
+c04b16 bcc $4b22     [c04b22] A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 NvMXdizc V:233 H:201 F:59
+c04b22 stz $2142     [802142] A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 NvMXdizc V:233 H:206 F:59
+c04b25 sty $2143     [802143] A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 NvMXdizc V:233 H:212 F:59
+c04b28 sta $2140     [802140] A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 NvMXdizc V:233 H:218 F:59
+c04b2b inx                    A:02f7 X:0004 Y:0000 S:02fd D:0000 DB:80 NvMXdizc V:233 H:224 F:59
+c04b2c inx                    A:02f7 X:0005 Y:0000 S:02fd D:0000 DB:80 nvMXdizc V:233 H:227 F:59
+c04b2d txa                    A:02f7 X:0006 Y:0000 S:02fd D:0000 DB:80 nvMXdizc V:233 H:230 F:59
+c04b2e and #$1e               A:0206 X:0006 Y:0000 S:02fd D:0000 DB:80 nvMXdizc V:233 H:233 F:59
+c04b30 sta $0b51     [800b51] A:0206 X:0006 Y:0000 S:02fd D:0000 DB:80 nvMXdizc V:233 H:236 F:59
+c04b33 rts                    A:02ff X:0004 Y:0003 S:02fd D:0000 DB:80 nvMXdiZC V:232 H: 98 F:41
+
+; Music will play
+c049d3 sta $2140     [802140] A:93f9 X:00c6 Y:00f9 S:0137 D:0000 DB:80 NvMxdizC V:233 H:168 F:39
+
+c0057b lda #$02               A:0001 X:0000 Y:004a S:013b D:0000 DB:80 nvMXdizC V: 55 H:  5 F:23
+c0057d ldy #$f9               A:0002 X:0000 Y:004a S:013b D:0000 DB:80 nvMXdizC V: 55 H:  8 F:23
+c0057f jsr $49a4     [c049a4] A:0002 X:0000 Y:00f9 S:013b D:0000 DB:80 NvMXdizC V: 55 H: 11 F:23
+
+c00582 lda #$ff               A:0001 X:0000 Y:00fe S:013b D:0000 DB:80 nvMXdizC V: 10 H:313 F:34
+c00584 sta $7efffc   [7efffc] A:00ff X:0000 Y:00fe S:013b D:0000 DB:80 NvMXdizC V: 10 H:316 F:34
+c00588 sta $7efffd   [7efffd] A:00ff X:0000 Y:00fe S:013b D:0000 DB:80 NvMXdizC V: 10 H:324 F:34
+c0058c jsr $4b4a     [c04b4a] A:00ff X:0000 Y:00fe S:013b D:0000 DB:80 NvMXdizC V: 10 H:331 F:34
+
+c06736 jsr $4a54     [c04a54] A:0112 X:0002 Y:0003 S:013f D:0000 DB:80 nvMXdizC V:232 H:296 F:39
+c06739 lda $00a6     [8000a6] A:0001 X:0000 Y:00ba S:013f D:0000 DB:80 nvMXdizC V: 65 H:116 F:13
+c0673c beq $674e     [c0674e] A:0000 X:0000 Y:00ba S:013f D:0000 DB:80 nvMXdiZC V: 65 H:123 F:13
+c0674e lda $0ba1     [800ba1] A:0000 X:0000 Y:00ba S:013f D:0000 DB:80 nvMXdiZC V: 65 H:127 F:13
+c06751 beq $677a     [c0677a] A:0000 X:0000 Y:00ba S:013f D:0000 DB:80 nvMXdiZC V: 65 H:144 F:13
+c0677a jsr $6a4b     [c06a4b] A:0000 X:0000 Y:00ba S:013f D:0000 DB:80 nvMXdiZC V: 65 H:148 F:13
+c06a4b phd                    A:0000 X:0000 Y:00ba S:013d D:0000 DB:80 nvMXdiZC V: 65 H:158 F:13
+c06a4c rep #$20               A:0000 X:0000 Y:00ba S:013b D:0000 DB:80 nvMXdiZC V: 65 H:165 F:13
+c06a4e stz $09ca     [8009ca] A:0000 X:0000 Y:00ba S:013b D:0000 DB:80 nvmXdiZC V: 65 H:170 F:13
+
+c04a3f lda #$01               A:0007 X:0000 Y:001e S:0137 D:0000 DB:80 nvMXdiZC V:121 H: 93 F:45
+c04a41 sta $7efffe   [7efffe] A:0001 X:0000 Y:001e S:0137 D:0000 DB:80 nvMXdizC V:121 H: 96 F:45
+c04a45 rts                    A:0001 X:0000 Y:001e S:0137 D:0000 DB:80 nvMXdizC V:121 H:104 F:45
+
+; Play Music routine!
+c04a54 sep #$30               A:0112 X:0002 Y:0003 S:013d D:0000 DB:80 nvMXdizC V:232 H:306 F:39
+c04a56 ldx $1fe0     [801fe0] A:0112 X:0002 Y:0003 S:013d D:0000 DB:80 nvMXdizC V:232 H:311 F:39
+c04a59 beq $4a5d     [c04a5d] A:0112 X:0000 Y:0003 S:013d D:0000 DB:80 nvMXdiZC V:232 H:317 F:39
+c04a5d tay                    A:0112 X:0000 Y:0003 S:013d D:0000 DB:80 nvMXdiZC V:232 H:322 F:39
+c04a5e lda $865d,y   [80866f] A:0112 X:0000 Y:0012 S:013d D:0000 DB:80 nvMXdizC V:232 H:324 F:39
+c04a61 tay                    A:0123 X:0000 Y:0012 S:013d D:0000 DB:80 nvMXdizC V:232 H:330 F:39
+
+c04a68 jsr $4aa3     [c04aa3] A:0111 X:0000 Y:0021 S:013a D:0000 DB:80 nvMXdizC V:236 H: 30 F:23
+c04a6b pla                    A:00ff X:0000 Y:0028 S:013c D:0000 DB:80 nvMXdiZC V: 67 H:  4 F: 7
+c04a6c sta $7efffd   [7efffd] A:0012 X:0000 Y:0028 S:013d D:0000 DB:80 nvMXdizC V: 67 H: 11 F: 7
+c04a70 ldy #$fa               A:0012 X:0000 Y:0028 S:013d D:0000 DB:80 nvMXdizC V: 67 H: 19 F: 7
+c04a72 jmp $49a4     [c049a4] A:0012 X:0000 Y:00fa S:013d D:0000 DB:80 NvMXdizC V: 67 H: 22 F: 7
+
+c04aa3 lda $866e,y   [808692] A:0001 X:0000 Y:0024 S:013a D:0000 DB:80 nvMXdizC V:121 H:128 F:45
+c04aa6 cmp #$ff               A:005f X:0000 Y:0024 S:013a D:0000 DB:80 nvMXdizC V:121 H:144 F:45
+c04aa8 beq $4ab4     [c04ab4] A:005f X:0000 Y:0024 S:013a D:0000 DB:80 nvMXdizc V:121 H:147 F:45
+c04aaa phy                    A:005f X:0000 Y:0024 S:013a D:0000 DB:80 nvMXdizc V:121 H:150 F:45
+c04aab ldy #$f9               A:005f X:0000 Y:0024 S:0139 D:0000 DB:80 nvMXdizc V:121 H:155 F:45
+c04aad jsr $49a4     [c049a4] A:005f X:0000 Y:00f9 S:0139 D:0000 DB:80 NvMXdizc V:121 H:158 F:45
+c04ab0 ply                    A:0001 X:0000 Y:001e S:0139 D:0000 DB:80 nvMXdizC V:121 H:114 F:45
+c04ab1 iny                    A:0001 X:0000 Y:0023 S:013a D:0000 DB:80 nvMXdizC V:121 H:121 F:45
+c04ab2 bra $4aa3     [c04aa3] A:0001 X:0000 Y:0024 S:013a D:0000 DB:80 nvMXdizC V:121 H:124 F:45
+c04ab4 rts                    A:00ff X:0000 Y:0028 S:013a D:0000 DB:80 nvMXdiZC V: 66 H:334 F: 7
+
+============
+= Routines =
+============
+; Play Music
+c04a54 sep #$30
+c04a56 ldx $1fe0
+c04a59 beq $4a5d
+c04a5b bpl $4a81
+c04a5d tay
+c04a5e lda $865d,y
+c04a61 tay
+c04a62 lda $866d,y
+c04a65 beq $4a75
+c04a67 pha
+c04a68 jsr $4aa3
+c04a6b pla
+c04a6c sta $7efffd
+
+c04a81 rts

@@ -1,0 +1,1 @@
+C:\Programmation\Traduction\CommonTools\bsnes-plus-073.1b\bsnes.exe rockmanforte_msu1.sfc
