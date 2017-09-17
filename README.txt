@@ -1,33 +1,35 @@
-Megaman/Rockman 7 MSU-1
+Rockman & Forte MSU-1
 Version 1.0
 by DarkShock
 
-This hack adds CD quality audio to Megaman 7 and Rockman 7 using the MSU-1 chip invented by byuu. It also works with the English translation of Rockman 7
+This hack adds CD quality audio to Rockman & Forte using the MSU-1 chip invented by byuu. It also works with the English translation by AGTP
 The hack has been tested on SD2SNES, bsnes-plus 073.1b and higan 094.
-The patched ROM needs to be named megaman7_msu1.sfc.
+The patched ROM needs to be named rockmanforte_msu1.sfc.
 
 Note that there's no emulator patch because the volume has been normalized to work on both emulators and SD2SNES (using +12 dBFS settings for the MSU-1 volume on Rev. F boards).
 
 The music pack can be found here: https://www.mediafire.com/?x75lh81ua42z27c
 
 Original ROM specs:
-MEGAMAN 7
-2097152 Bytes (16.0000 Mb)
+ROCKMAN&FORTE
+4194304 Bytes (32.0000 Mb)
+Padded: Maybe, 132628 Bytes (1.0119 Mb)
 Interleaved/Swapped: No
 Backup unit/emulator header: No
 Version: 1.0
-Checksum: Ok, 0xf199 (calculated) == 0xf199 (internal)
-Inverse checksum: Ok, 0x0e66 (calculated) == 0x0e66 (internal)
-Checksum (CRC32): 0x2d947536
+Checksum: Ok, 0xfe92 (calculated) == 0xfe92 (internal)
+Inverse checksum: Ok, 0x016d (calculated) == 0x016d (internal)
+Checksum (CRC32): 0x5047e0d4
 
-ROCKMAN 7
-2097152 Bytes (16.0000 Mb)
+Rockman & Forte (English)
+4194304 Bytes (32.0000 Mb)
+Padded: Maybe, 29006 Bytes (0.2213 Mb)
 Interleaved/Swapped: No
 Backup unit/emulator header: No
 Version: 1.0
-Checksum: Ok, 0x44d1 (calculated) == 0x44d1 (internal)
-Inverse checksum: Ok, 0xbb2e (calculated) == 0xbb2e (internal)
-Checksum (CRC32): 0x31f18dda
+Checksum: Bad, 0x9437 (calculated) != 0xfe92 (internal)
+Inverse checksum: Bad, 0x6bc8 (calculated) != 0x016d (internal)
+Checksum (CRC32): 0xbc12734c
 
 ===============
 = Using BSNES =
@@ -41,7 +43,7 @@ Checksum (CRC32): 0x31f18dda
 ===============
 1. Patch the ROM
 2. Launch it using higan
-3. Go to %USERPROFILE%\Emulation\Super Famicom\megaman7_msu1.sfc in Windows Explorer.
+3. Go to %USERPROFILE%\Emulation\Super Famicom\rockmanforte_msu1.sfc in Windows Explorer.
 4. Copy manifest.bml and the .pcm file there
 5. Run the game
 
@@ -51,65 +53,51 @@ Checksum (CRC32): 0x31f18dda
 Drop the ROM file, tmnt4_msu1.msu and the .pcm files in any folder. (I really suggest creating a folder)
 Launch the game and voilà, enjoy !
 
-The music pack has been edited to be played with the +12 dBFS settings.
-
 ===========
 = Credits =
 ===========
 * DarkShock - ASM hacking & coding, Music editing
 * Krzysztof Slowikowski - Music reorchestration
 
-Many thanks to Krzysztof who gave me in advance the whole soundtrack in WAV format, pretty cool on your part !
-
 =========
 = Music =
 =========
-01 = Opening Part 1 (No Loop)
-02 = Title Screen (No Loop)
-03 = Intro Stage
-04 = Stage Select
-05 = Freeze Man
-06 = Cloud Man
-07 = Junk Man
-08 = Turbo Man
-09 = Slash Man
-10 = Spring Man
-11 = Shade Man
-12 = Burst Man
-13 = Robot Museum Stage
-14 = Boss Battle 1
-15 = Wily Stage 1
-16 = Wily Stage 2
-17 = Wily Stage 3
-18 = Wily Stage 4
-19 = Boss Battle 2
-20 = Wily Boss Battle
-21 = Mega Man Jingle / Stage Selected Jingle (No Loop)
-22 = Bass's Theme
-23 = Protoman's Whistle (No Loop)
-24 = Dr. Light Lab 1
-25 = Dr. Light Lab 2 (Destroyed)
-26 = You Get a Weapon
-27 = Auto Shop
-28 = Boss Defeated Jingle (No Loop)
-29 = Dr. Wily Defeated (No Loop)
-30 = Password Screen
-31 = End Credits
-32 = Dr. Wily Castle Jingle (No Loop)
-33 = Bad Helmet (No Loop)
-34 = Opening Part 2 (No Loop)
-35 = Shade Man Alternate (Ghost 'n Goblins)
-36 = Shade Man Alternate Stage Selected (No Loop)
+01 = Title Screen
+02 = File Select
+04 = Player Select
+05 = Stage Select
+06 = Stage Selected
+07 = Museum
+08 = Dynamo Man
+09 = Cold Man
+10 = Ground Man
+11 = Tengu Man
+12 = Astro Man
+13 = Pirate Man
+14 = Burner Man
+15 = Magic Man
+16 = King Castle
+17 = Wily Castle
+18 = Seals
+19 = King Castle Intro (No Loop)
+20 = New Weapon Presentation
+21 = Victory (No Loop)
+22 = Rightot's Shop
+23 = Data Base
+24 = Game Over
+25 = Credits
+27 = Boss
+28 = Last Boss
 
 =============
 = Compiling =
 =============
-Source is availabe on GitHub: https://github.com/mlarouche/Megaman7-MSU1
+Source is availabe on GitHub: https://github.com/mlarouche/RockmanForte-MSU1
 
 To compile the hack you need
 
 * bass v14 (http://files.byuu.org/download/bass_v14.tar.xz)
-* wav2msu (https://github.com/mlarouche/wav2msu)
+* msupcm (https://github.com/qwertymodo/msupcmplusplus)
 
 To distribute the hack you need
 

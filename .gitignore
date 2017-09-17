@@ -22,3 +22,9 @@ ucon64\.exe
 zlib\.dll
 
 zlib1\.dll
+
+msupcm\.exe
+
+*.bak
+
+*.7z

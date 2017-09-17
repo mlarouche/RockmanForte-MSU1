@@ -4,7 +4,7 @@
     "pack": "Rockman & Forte Guitar Playthrough",
     "artist": "Krzysztof Słowikowski",
     "url": "http://www.mediafire.com/?gb61j7qiwkadu2w",
-    "normalization": -12,
+    "normalization": -15,
     "output_prefix": "rockmanforte_msu1",
     "tracks": [
         {
@@ -28,7 +28,7 @@
             "file": "Krzysztof Słowikowski - Mega Man & Bass Guitar Playthrough - 02 Player Select.wav",
             "trim_start": 5207,
             "trim_end": 571461,
-            "loop": "288900"
+            "loop": 288900
         },
         {
             "track_number": 5,
