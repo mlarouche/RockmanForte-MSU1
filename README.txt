@@ -6,9 +6,11 @@ This hack adds CD quality audio to Rockman & Forte using the MSU-1 chip invented
 The hack has been tested on SD2SNES, bsnes-plus 073.1b and higan 094.
 The patched ROM needs to be named rockmanforte_msu1.sfc.
 
-Note that there's no emulator patch because the volume has been normalized to work on both emulators and SD2SNES (using +12 dBFS settings for the MSU-1 volume on Rev. F boards).
+Note that there's 2 patches:
+* rockmanforte_msu1.ips for the original Japanese release
+* rockmanforte_msu1_english.ips that apply to AGTP's translation with Rockman & Forte logo
 
-The music pack can be found here: https://www.mediafire.com/?x75lh81ua42z27c
+The music pack can be found here: http://www.mediafire.com/file/cxd2oecl5ba4737/RockmanForte_MSU1_Music.7z
 
 Original ROM specs:
 ROCKMAN&FORTE
